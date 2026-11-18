@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bhuvaneswary R | Entry-level Data Analyst</title>
+<meta name="description" content="Portfolio of Bhuvaneswary R, a Computer Science graduate from Chennai looking for an entry-level data analysis role.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📊%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sheet:#fbfcf9; --panel:#ffffff; --grid:#dfe7df; --ink:#16251e; --muted:#58695f;
+  --green:#1b6b49; --green-soft:#e1f1e8; --gold:#f0ae1a; --gold-soft:#fdf1cf;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --cell:44px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --sheet:#101a15; --panel:#16241d; --grid:#25372d; --ink:#e9f1ec; --muted:#9bb0a5;
+    --green:#5fd39b; --green-soft:#183a2b; --gold:#f5bf3f; --gold-soft:#3a2f10;
+  }
+}
+:root[data-theme="dark"]{
+  --sheet:#101a15; --panel:#16241d; --grid:#25372d; --ink:#e9f1ec; --muted:#9bb0a5;
+  --green:#5fd39b; --green-soft:#183a2b; --gold:#f5bf3f; --gold-soft:#3a2f10;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px;height:100%}
+body{
+  font-family:var(--body);color:var(--ink);background-color:var(--sheet);line-height:1.65;font-size:17px;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:var(--cell) var(--cell);background-attachment:fixed;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em}
+
+/* nav = sheet tabs */
+header.nav{position:sticky;top:0;z-index:20;background:var(--sheet);border-bottom:1px solid var(--grid);padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;align-items:center;gap:6px;height:54px;overflow-x:auto;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav .logo{font-family:var(--display);font-weight:800;margin-right:auto;white-space:nowrap;text-decoration:none}
+.tab{padding:7px 14px;font-size:14px;font-weight:500;text-decoration:none;color:var(--muted);border:1px solid transparent;border-bottom:0;border-radius:8px 8px 0 0;white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab.on{background:var(--panel);color:var(--green);border-color:var(--grid);font-weight:600}
+#theme{border:1px solid var(--grid);background:var(--panel);color:var(--ink);border-radius:8px;width:36px;height:34px;cursor:pointer;font-size:16px;flex:none}
+
+/* hero */
+.hero{padding:56px 0 72px}
+.fbar{display:flex;border:1px solid var(--grid);background:var(--panel);border-radius:8px;overflow:hidden;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;max-width:560px}
+.fbar b{padding:8px 14px;background:var(--green-soft);color:var(--green);border-right:1px solid var(--grid);font-weight:600}
+.fbar span{padding:8px 14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hero h1{font-size:clamp(46px,9vw,104px);font-weight:800;margin:28px 0 8px}
+.sel{display:inline-block;position:relative;padding:0 .12em;outline:2px solid var(--green);background:color-mix(in srgb,var(--green) 10%,transparent);animation:pick .9s .2s both}
+.sel::after{content:"";position:absolute;right:-6px;bottom:-6px;width:10px;height:10px;background:var(--green);border:2px solid var(--sheet)}
+@keyframes pick{from{outline-color:transparent;background:transparent}to{}}
+.hero .role{font-family:var(--display);font-size:clamp(20px,3vw,28px);font-weight:500;color:var(--green);margin-bottom:20px}
+.hero p.lead{max-width:60ch;font-size:19px;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--green);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.fill{background:var(--green);color:var(--sheet)}
+.btn.line{color:var(--green)}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+.meta span{background:var(--panel);border:1px solid var(--grid);border-radius:999px;padding:5px 14px;font-size:14px}
+
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--grid);background:linear-gradient(var(--sheet),var(--sheet))}
+section h2{font-size:clamp(30px,5vw,46px);margin-bottom:10px;font-weight:800}
+.sub{color:var(--muted);max-width:58ch;margin-bottom:34px}
+.panel{background:var(--panel);border:1px solid var(--grid);border-radius:12px;padding:26px}
+
+/* about */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
+.about p+p{margin-top:14px}
+.facts{list-style:none;padding:0}
+.facts li{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px dashed var(--grid);font-size:15px}
+.facts li:last-child{border:0}
+.facts b{font-weight:600}
+.facts span{color:var(--muted);text-align:right}
+
+/* skills as a table */
+.tbl{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--grid);border-radius:12px;overflow:hidden}
+.tbl th,.tbl td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--grid);vertical-align:top;font-size:16px}
+.tbl th{background:var(--green-soft);color:var(--green);font-family:var(--display);font-size:15px}
+.tbl tr:last-child td{border:0}
+.tbl td:first-child{font-weight:600;width:30%}
+.chip{display:inline-block;background:var(--gold-soft);border-radius:6px;padding:2px 10px;margin:2px 4px 2px 0;font-size:14px}
+.scroll{overflow-x:auto}
+
+/* projects */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.proj h3{font-size:24px;margin-bottom:6px}
+.tag{display:inline-block;font-size:13px;font-weight:600;color:var(--green);background:var(--green-soft);padding:2px 10px;border-radius:6px;margin-bottom:14px}
+.proj ul{padding-left:20px;color:var(--muted)}
+.proj li+li{margin-top:10px}
+
+/* timeline */
+.tl{position:relative;padding-left:30px;border-left:3px solid var(--green)}
+.tl .it{position:relative;padding-bottom:30px}
+.tl .it:last-child{padding-bottom:0}
+.tl .it::before{content:"";position:absolute;left:-39px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--gold);border:3px solid var(--sheet)}
+.tl time{font-size:14px;color:var(--muted);font-weight:500}
+.tl h3{font-size:22px;margin:2px 0}
+.tl p{color:var(--muted);font-size:16px}
+.score{display:inline-block;margin-top:6px;font-weight:600;color:var(--green)}
+
+/* certs */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.cert{border-left:4px solid var(--gold)}
+.cert h3{font-size:19px;margin-bottom:4px}
+.cert p{color:var(--muted);font-size:15px}
+
+/* contact */
+.contact a.row{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px dashed var(--grid);text-decoration:none;font-size:18px;word-break:break-all}
+.contact a.row:last-child{border:0}
+.contact a.row:hover b{color:var(--green)}
+.contact a.row span{color:var(--muted);font-size:15px;flex:none}
+footer{padding:30px 0 40px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--grid);background:var(--sheet)}
+
+@media (max-width:760px){
+  body{font-size:16px}
+  .about,.grid2{grid-template-columns:1fr}
+  .hero{padding-top:36px}
+  .tbl td:first-child{width:auto}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Bhuvaneswary R</a>
+    <a class="tab" href="#about">About</a>
+    <a class="tab" href="#skills">Skills</a>
+    <a class="tab" href="#projects">Projects</a>
+    <a class="tab" href="#education">Education</a>
+    <a class="tab" href="#training">Training</a>
+    <a class="tab" href="#contact">Contact</a>
+    <button id="theme" type="button" aria-label="Switch between light and dark theme">◐</button>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap hero">
+  <div class="fbar" aria-hidden="true"><b>A1</b><span>=PROFILE("Bhuvaneswary R", "Chennai")</span></div>
+  <h1><span class="sel">Bhuvaneswary R</span></h1>
+  <p class="role">Entry-level data analyst</p>
+  <p class="lead">I turn requirements and raw records into clear, accurate, well-documented information. I work in Excel and SQL, and I’m looking for a first role where I can keep learning by doing real analysis.</p>
+  <div class="cta">
+    <a class="btn fill" href="#projects">See my projects</a>
+    <a class="btn line" href="#contact">Get in touch</a>
+  </div>
+  <div class="meta">
+    <span>Chennai, Tamil Nadu</span>
+    <span>B.E. Computer Science, CGPA 8.2</span>
+    <span>Class of 2025</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About me</h2>
+    <p class="sub">A computer science graduate who likes questions that have a clean, checkable answer.</p>
+    <div class="about">
+      <div class="panel">
+        <p>I’m looking for an entry-level opportunity where I can apply my analytical thinking, communication skills and problem-solving to help an organisation grow, while gaining practical experience and improving professionally.</p>
+        <p>In my projects I start by understanding what users need, then collect and interpret the data, structure how it flows, and document the process so others can follow it. Accuracy and consistency of records matter most to me.</p>
+      </div>
+      <div class="panel">
+        <ul class="facts">
+          <li><b>Focus</b><span>Data analysis</span></li>
+          <li><b>Tools</b><span>Excel, SQL, Word</span></li>
+          <li><b>Language</b><span>Java basics</span></li>
+          <li><b>Location</b><span>Chennai, India</span></li>
+          <li><b>Looking for</b><span>Entry-level roles</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="sub">What I use day to day, and what I can already do with it.</p>
+    <div class="scroll">
+    <table class="tbl">
+      <thead><tr><th>Area</th><th>What I can do</th></tr></thead>
+      <tbody>
+        <tr><td>Data analysis</td><td><span class="chip">Excel</span><span class="chip">Basic SQL</span><span class="chip">KNIME</span> Collect, organise and interpret data to reach clear conclusions.</td></tr>
+        <tr><td>SQL</td><td>Write basic queries: <span class="chip">SELECT</span><span class="chip">INSERT</span><span class="chip">UPDATE</span></td></tr>
+        <tr><td>Java</td><td>Core basics and a solid understanding of program flow.</td></tr>
+        <tr><td>Office tools</td><td><span class="chip">MS Excel</span><span class="chip">MS Word</span></td></tr>
+        <tr><td>Requirements and documentation</td><td>Understand what a system needs and write it down clearly.</td></tr>
+        <tr><td>Communication</td><td>Strong written and verbal communication.</td></tr>
+        <tr><td>Thinking</td><td>Logical, analytical problem solving.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="sub">Two academic projects where I worked on requirements, data and documentation.</p>
+    <div class="grid2">
+      <article class="panel proj">
+        <span class="tag">Blockchain</span>
+        <h3>Smart Contract Based Confidential Health Record System</h3>
+        <ul>
+          <li>Analysed user requirements and interpreted data to keep health records accurate.</li>
+          <li>Helped structure the data flow and documentation to keep the process clear and the data intact.</li>
+        </ul>
+      </article>
+      <article class="panel proj">
+        <span class="tag">Core Java</span>
+        <h3>Student Management System</h3>
+        <ul>
+          <li>Collected and analysed system requirements to design structured workflows.</li>
+          <li>Organised and maintained data records so they stayed accurate and consistent.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="sub" style="margin:22px 0 0">More work is on <a href="https://github.com/bhuvaneswarygithub" target="_blank" rel="noopener" style="color:var(--green);font-weight:600">my GitHub</a>.</p>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <p class="sub">From school to engineering degree, newest first.</p>
+    <div class="tl">
+      <div class="it">
+        <time>Aug 2021 to May 2025</time>
+        <h3>B.E. Computer Science and Engineering</h3>
+        <p>Sri Muthukumaran Institute of Technology</p>
+        <span class="score">CGPA 8.2</span>
+      </div>
+      <div class="it">
+        <time>Jun 2020 to Apr 2021</time>
+        <h3>HSC, Computer Science stream</h3>
+        <p>Government Girls Higher Secondary School</p>
+        <span class="score">85%</span>
+      </div>
+      <div class="it">
+        <time>Jun 2018 to Apr 2019</time>
+        <h3>SSLC</h3>
+        <p>Government Girls Higher Secondary School</p>
+        <span class="score">80%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="training">
+  <div class="wrap">
+    <h2>Certifications and training</h2>
+    <p class="sub">Courses, an internship and a workshop that broadened my base.</p>
+    <div class="certs">
+      <div class="panel cert"><h3>React.js Full Stack Developer</h3><p>GUVI</p></div>
+      <div class="panel cert"><h3>AWS Cloud Computing</h3><p>CSC Computer Software College</p></div>
+      <div class="panel cert"><h3>Java internship</h3><p>Block-UP.tech</p></div>
+      <div class="panel cert"><h3>Data Analytics with KNIME</h3><p>Workshop, Empower Guiding Centre (NISC)</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Let’s talk</h2>
+    <p class="sub">I’m open to entry-level data analysis roles. Email is the quickest way to reach me.</p>
+    <div class="panel contact">
+      <a class="row" href="mailto:rkbhuvaneswary@gmail.com"><span>Email</span><b>rkbhuvaneswary@gmail.com</b></a>
+      <a class="row" href="tel:+916381722983"><span>Phone</span><b>+91 63817 22983</b></a>
+      <a class="row" href="https://linkedin.com/in/bhuvaneswary-r-32b126289" target="_blank" rel="noopener"><span>LinkedIn</span><b>bhuvaneswary-r-32b126289</b></a>
+      <a class="row" href="https://github.com/bhuvaneswarygithub" target="_blank" rel="noopener"><span>GitHub</span><b>bhuvaneswarygithub</b></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> Bhuvaneswary R · Chennai, Tamil Nadu</div></footer>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // theme toggle
+  var root=document.documentElement,btn=document.getElementById('theme');
+  var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+  try{var s=localStorage.getItem('theme');if(s){root.setAttribute('data-theme',s);dark=s==='dark';}}catch(e){}
+  btn.addEventListener('click',function(){
+    dark=!dark;var t=dark?'dark':'light';root.setAttribute('data-theme',t);
+    try{localStorage.setItem('theme',t);}catch(e){}
+  });
+  // highlight active tab
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var map={};tabs.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){tabs.forEach(function(t){t.classList.remove('on');});
+          var a=map[e.target.id];if(a)a.classList.add('on');}
+      });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('section[id]').forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
